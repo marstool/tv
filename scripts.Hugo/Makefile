@@ -144,7 +144,9 @@ endif
 ############################################### UseTree  end
 
 
-help_text9=$(if $(help_textTV),$(help_textTV),$(if $(help_textHU),$(help_textHU),$(help_textINDEX)))
+help_text9=$(if $(help_textHU),$(help_textHU),$(help_textINDEX))
+help_text9+=$(if $(help_textTV),$(help_textTV))
+
 export help_text9
 
 all:

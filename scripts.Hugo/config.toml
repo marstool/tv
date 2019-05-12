@@ -2,7 +2,7 @@ baseURL = "/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = " ww.jjj123.com "
+title = " tv.jjj123.com tv电视"
 theme = "hugo-theme-docdock"
 #themesdir = "../.."
 themesdir = "./themes"
