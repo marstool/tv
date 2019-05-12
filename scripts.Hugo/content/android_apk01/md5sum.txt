@@ -1,2 +1,3 @@
 b3013cbde2d97003c085f619583f7d3f  ru.iptvremote.android.iptv.001.apk
+6bfb543ce694267a73e009e3bf8db6a0  ru.iptvremote.android.iptv.002.apk
 d408972ce6f8046c798b85801940a612  ru.iptvremote.android.iptv.origin.apk
