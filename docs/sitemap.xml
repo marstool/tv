@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="hddp://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="hddp://www.w3.org/1999/xhtml">
   
   <url>
     <loc>/</loc>
@@ -8,6 +8,10 @@
   
   <url>
     <loc>/android_apk01/</loc>
+  </url>
+  
+  <url>
+    <loc>/install_guide/</loc>
   </url>
   
   <url>
