@@ -1,0 +1,22 @@
+define EOL
+
+
+endef
+
+dirS:=$(shell ls -d */)
+
+m3uPX2:
+	test 'content' = $(shell basename `realpath .`|awk '{printf $$1}') 
+	$(foreach aa1,$(dirS), . ../1.txt && cd $(aa1) && /bin/rename_fix_special_chat.sh low  $(EOL))
+	find -name "*wav*" > /dev/null && echo "why still exist '*.wav' file ?"
+	. ../1.txt && (ls -d 20*/ |xargs -n 1 /bin/gen_index.json.title.decript.sh)
+	gen_index.m3u.sh
+	. ../1.txt && . ../3.txt
+	make rg -C ../../ 
+	cd ../../ && git add . && git commit -a -m "`date`"
+#	read -n 1 -s -r -p "Press any key to continue" || echo 
+#	read --help 
+#	read || echo 
+	while [ -d $${PWD} ] ; do \
+		echo " you should manual commit and upload the tree , then delete the directory `realpath ../../` " ;\
+		sleep 5 ; done
