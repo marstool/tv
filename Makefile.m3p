@@ -7,7 +7,8 @@ dirS:=$(shell ls -d */)
 
 m3uPX2:
 	test 'content' = $(shell basename `realpath .`|awk '{printf $$1}') 
-	$(foreach aa1,$(dirS), . ../1.txt && cd $(aa1) && /bin/rename_fix_special_chat.sh low  $(EOL))
+	$(foreach aa1,$(dirS), . ../1.txt && cd $(aa1) && \
+		((ls *.json *.mp3 *.mp4 *.mkv *.html *.jpg 2>/dev/null ) | xargs -n 1 /bin/rename_fix_special_chat.sh low )  $(EOL))
 	find -name "*wav*" > /dev/null && echo "why still exist '*.wav' file ?"
 	. ../1.txt && (ls -d 20*/ |xargs -n 1 /bin/gen_index.json.title.decript.sh)
 	gen_index.m3u.sh
